@@ -16,10 +16,10 @@ Output:
 import scala.io.StdIn
 object q_03 {
   def main(args: Array[String]): Unit = {
-    println(formatNames("Benny", str => str.toUpperCase))
-    println(formatNames("Ni", str => str.toUpperCase) + formatNames("roshan", str => str.toLowerCase))
-    println(formatNames("Saman", str => str.toLowerCase))
-    println(formatNames("K", str => str.toUpperCase) + formatNames("umar", str => str.toLowerCase) + formatNames("a", str => str.toUpperCase))
+    println(formatNames("Benny", toUpper))
+    println(formatNames("Ni", toUpper) + formatNames("roshan", toLower))
+    println(formatNames("Saman", toLower))
+    println(formatNames("K", toUpper) + formatNames("umar", toLower) + formatNames("a", toUpper))
   }
 
   val toUpper: String => String = my_string => my_string.map { c =>
